@@ -1,7 +1,47 @@
+### Root endpoint with valid token
 GET http://localhost:5256
+Authorization: Bearer TechHive-token
+
+###
+
+GET http://localhost:5256/users
+Authorization: Bearer TechHive-token
+
+###
+
+POST http://localhost:5256/users
+Authorization: Bearer TechHive-token
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "James",
+  "email": "james@example.com"
+}
+
+###
+
+PUT http://localhost:5256/users/0
+Authorization: Bearer TechHive-token
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Alex Updated",
+  "email": "alex.updated@example.com"
+}
+
+###
+DELETE http://localhost:5256/users/1
+Authorization: Bearer TechHive-token
+
+### 
+GET http://localhost:5256/users
+Authorization: Bearer wrong-token
 
 ###
 GET http://localhost:5256/users
 
-###
+
+
 

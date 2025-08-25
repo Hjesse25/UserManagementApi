@@ -64,4 +64,10 @@ app.MapDelete("/users/{id}", (int id) =>
     }
 });
 
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
+app.UseMiddleware<TokenAuthenticationMiddleware>();
+
+app.UseMiddleware<RequestResponseLoggingMiddleware>();
+
 app.Run();
